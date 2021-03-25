@@ -15,11 +15,106 @@ body {
   --white: hsl(420, 69%, 100%);
   --darkBlue: hsl(249, 10%, 26%);
   --grayBlue: hsl(246, 25%, 77%);
+  --grey: hsl(0, 0%, 87%);
+  --borderRadius: 10px;
 
   background-color: var(--red);
   background-image: url('./images/bg-intro-mobile.png');
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--white);
+  text-align: center;
+}
+
+header {
+  padding: 5.75rem 1.5rem 4rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.29px;
+  padding-bottom: 1.3rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 500;
+}
+
+main {
+  padding: 0 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+}
+
+main aside {
+  background-color: var(--blue);
+  border-radius: var(--borderRadius);
+  padding: 1rem;
+  box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.1469);
+}
+
+main aside p {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.27px;
+}
+
+main form {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--borderRadius);
+  box-shadow: 0 8px 0 0 rgba(0, 0, 0, 0.1469);
+}
+
+main form input,
+main form button {
+  width: 100%;
+  padding: 0.9375rem 1.25rem;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.25px;
+  font-weight: 600;
+  color: var(--darkBlue);
+}
+
+::placeholder {
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.25px;
+  font-weight: 600;
+}
+
+main form button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  letter-spacing: 1px;
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.0909);
+  padding-bottom: 0.5rem;
+}
+
+main form .tos {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.6875rem;
+  line-height: 1.3125rem;
+  font-weight: 500;
+  color: hsl(246, 25%, 77%);
+}
+
+main form .tos a {
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
 }
 
 .attribution {
