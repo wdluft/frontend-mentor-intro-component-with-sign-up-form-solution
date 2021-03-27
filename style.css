@@ -87,42 +87,31 @@ main form button {
 }
 
 .input-group {
-  position: relative;
   padding-bottom: 1rem;
+  position: relative;
 }
 
-/* Input is not empty, not in focus, not valid */
-form input:invalid:not(:focus):not(:placeholder-shown) {
+.showError {
   border-color: var(--red);
   border-width: 2px;
+  background-image: url('./images/icon-error.svg');
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 95% 16px;
 }
 
-form input:invalid:not(:focus):not(:placeholder-shown) + .error-msg {
-  display: block;
-  color: var(--red);
-  font-size: 0.6875rem;
-  line-height: 1.0625rem;
-  text-align: right;
-  font-weight: 500;
-}
-
-/* Invalid input becomes in focus (and also still isn't empty) */
-form input:invalid:focus:not(:placeholder-shown) {
-  border-color: var(--red);
-  border-width: 2px;
-}
-
-form input:invalid:focus:not(:placeholder-shown) + .error-msg {
-  display: block;
-  color: var(--red);
-  font-size: 0.6875rem;
-  line-height: 1.0625rem;
-  text-align: right;
-  font-weight: 500;
-}
-
-.error-msg {
+.hide-error-msg {
   display: none;
+}
+
+.show-error-msg {
+  display: block;
+  color: var(--red);
+  font-size: 0.6875rem;
+  line-height: 1.0625rem;
+  text-align: right;
+  font-weight: 500;
+  height: 1.0625rem;
 }
 
 ::placeholder {
@@ -176,12 +165,12 @@ main form .tos a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
-    align-items: center;
+    align-items: start;
   }
 
   header {
     text-align: left;
-    padding: 0;
+    padding: 10.5rem 0 0;
   }
 
   h1 {
@@ -231,6 +220,6 @@ main form .tos a {
 
 @media screen and (min-width: 69rem) {
   .container {
-    padding: 7.5rem 10.25rem 3rem;
+    padding: 7.5rem 10.25rem 2rem;
   }
 }
